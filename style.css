@@ -29,10 +29,10 @@ body, html {
 /* Animación de movimiento de estrellas */
 @keyframes stars-animation {
     from {
-        background-position: 0 0;
+        transform: translateY(0);
     }
     to {
-        background-position: 100% 100%;
+        transform: translateY(-100%);
     }
 }
 

@@ -33,28 +33,20 @@ body, html {
     }
 }
 /* Contenedor de flores */
-.flowers {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centrar las flores */
-}
-/* Imágenes de flores animadas */
 .flower {
     position: absolute;
-    width: 100px; /* Tamaño de las flores */
-    height: auto;
+    width: 2000px; /* Ajustar el tamaño de las flores */
+    height: auto; /* Mantener la proporción */
     animation: flower-animation 6s ease-in-out infinite alternate; /* Animación de oscilación de las flores */
 }
-/* Posición y animación de la primer flor */
 .flower1 {
-    top: 10%; /* Posición desde arriba */
-    left: 20%; /* Posición desde la izquierda */
+    top: 100%; /* Posición desde arriba */
+    left: 200%; /* Posición desde la izquierda */
 }
-/* Posición y animación de la segunda flor */
 .flower2 {
-    top: 20%; /* Posición desde arriba */
-    left: 70%; /* Posición desde la izquierda */
+    top: 200%; /* Posición desde arriba */
+    left: 700%; /* Posición desde la izquierda */
+}
 }
 /* Animación de oscilación de las flores */
 @keyframes flower-animation {
@@ -68,14 +60,15 @@ body, html {
 /* Corazón animado */
 .heart {
     position: absolute;
-    width: 50px; /* Tamaño del corazón */
-    height: 50px;
+    width: 1000px; /* Ajustar el tamaño del corazón */
+    height: auto; /* Mantener la proporción */
     background-image: url('assets/heart.png'); /* Ruta de la imagen del corazón */
     background-size: cover; /* Ajustar tamaño de la imagen */
     animation: heart-animation 1s ease-in-out infinite alternate; /* Animación de salto del corazón */
-    bottom: 20%; /* Posición desde abajo */
-    left: 50%; /* Centrar horizontalmente */
+    bottom: 200%; /* Posición desde abajo */
+    left: 500%; /* Centrar horizontalmente */
     transform: translateX(-50%);
+}
 }
 /* Animación de salto del corazón */
 @keyframes heart-animation {

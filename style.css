@@ -40,12 +40,12 @@ body, html {
     animation: flower-animation 6s ease-in-out infinite alternate; /* Animación de oscilación de las flores */
 }
 .flower1 {
-    top: 100%; /* Posición desde arriba */
-    left: 200%; /* Posición desde la izquierda */
+    top: 10%; /* Posición desde arriba */
+    left: 20%; /* Posición desde la izquierda */
 }
 .flower2 {
-    top: 200%; /* Posición desde arriba */
-    left: 700%; /* Posición desde la izquierda */
+    top: 20%; /* Posición desde arriba */
+    left: 70%; /* Posición desde la izquierda */
 }
 }
 /* Animación de oscilación de las flores */
@@ -65,8 +65,8 @@ body, html {
     background-image: url('assets/heart.png'); /* Ruta de la imagen del corazón */
     background-size: cover; /* Ajustar tamaño de la imagen */
     animation: heart-animation 1s ease-in-out infinite alternate; /* Animación de salto del corazón */
-    bottom: 200%; /* Posición desde abajo */
-    left: 500%; /* Centrar horizontalmente */
+    bottom: 20%; /* Posición desde abajo */
+    left: 50%; /* Centrar horizontalmente */
     transform: translateX(-50%);
 }
 }

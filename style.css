@@ -39,29 +39,29 @@ body, html {
 /* Contenedor de flores */
 .flowers {
     position: absolute;
-    top: 500%;
-    left: 500%;
-    transform: translate(-500%, -500%); /* Centrar las flores */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar las flores */
 }
 
 /* Imágenes de flores animadas */
 .flower {
     position: absolute;
-    width: 1000px; /* Tamaño de las flores */
+    width: 100px; /* Tamaño de las flores */
     height: auto;
     animation: flower-animation 6s ease-in-out infinite alternate; /* Animación de oscilación de las flores */
 }
 
-/* Posición y animación de la primera flor */
+/* Posición y animación de la primer flor */
 .flower1 {
-    top: 1000%; /* Posición desde arriba */
-    left: 200%; /* Posición desde la izquierda */
+    top: 10%; /* Posición desde arriba */
+    left: 20%; /* Posición desde la izquierda */
 }
 
 /* Posición y animación de la segunda flor */
 .flower2 {
-    top: 2000%; /* Posición desde arriba */
-    left: 700%; /* Posición desde la izquierda */
+    top: 20%; /* Posición desde arriba */
+    left: 70%; /* Posición desde la izquierda */
 }
 
 /* Animación de oscilación de las flores */

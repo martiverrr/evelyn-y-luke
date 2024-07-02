@@ -1,0 +1,760 @@
+*,
+*::después,
+*::antes {
+  relleno: 0;
+  margen: 0;
+  tamaño de caja: borde-caja;
+}
+
+:raíz {
+  --color oscuro: #000;
+}
+
+cuerpo {
+  pantalla:flexible;
+  alinear-elementos: flex-end;
+  justificar-contenido: centro;
+  altura mínima: 100vh;
+  color de fondo: var(--color-oscuro);
+  desbordamiento: oculto;
+  perspectiva: 1000px;
+}
+
+#letra {
+  tamaño de fuente: 28px;
+  familia de fuentes: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color blanco;
+  posición: absoluta;
+  margen inferior: 20%;
+  índice z: 1;
+  peso de fuente: negrita;
+  espaciado entre letras: 4px;
+}
+@media solo pantalla y (ancho máximo: 600px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+  #letra {
+      tamaño de fuente: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+      margen inferior: 530px;
+      espaciado entre letras: 3px;
+  }
+
+}
+.título {
+  margen inferior: 180px;
+  familia de fuentes: "Arial Narrow", Arial, sans-serif;
+  color amarillo;
+  posición: absoluta;
+  peso de fuente: negrita;
+  espaciado entre letras: 10px;
+  opacidad: 0;
+  animación: fadeIn 3s entrada-salida gradual hacia adelante;
+  alinear texto: centro;
+}
+@keyframes se desvanecen {
+  de {
+    opacidad: 0;
+  }
+  a {
+    opacidad: 1;
+  }
+}
+
+.noche {
+  índice z: -1;
+  posición: absoluta;
+  izquierda: 50%;
+  arriba: 0;
+  transformar: translateX(-50%);
+  ancho: 100%;
+  altura: 100%;
+  filtro: desenfoque(0.1vmin);
+  imagen de fondo: gradiente radial(
+      elipse en la parte superior,
+      transparente 0%,
+      var(--color oscuro)
+    ),
+    gradiente radial(
+      elipse en la parte inferior,
+      var(--color oscuro),
+      rgba(145, 233, 255, 0,2)
+    ),
+    gradiente lineal repetitivo(
+      220 grados,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19 píxeles,
+      transparente 19px,
+      transparente 22px
+    ),
+    gradiente lineal repetitivo(
+      189 grados,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19 píxeles,
+      transparente 19px,
+      transparente 22px
+    ),
+    gradiente lineal repetitivo(
+      148 grados,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19 píxeles,
+      transparente 19px,
+      transparente 22px
+    ),
+    gradiente lineal (90 grados, rgb (0, 255, 250), rgb (240, 240, 240));
+}
+
+.flores {
+  posición: relativa;
+  transformar: escala(0.9);
+  /*margen inferior: 100px;
+  */
+}
+
+@media solo pantalla y (ancho máximo: 600px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+.flores {
+      tamaño de fuente: 14px;
+      margen inferior: 35%;
+      espaciado entre letras: 3px;
+      transformar: escala(1.0);
+}
+
+}
+
+.flor {
+  posición: absoluta;
+  abajo: 10vmin;
+  origen-transformación: centro inferior;
+  índice z: 10;
+  --fl-velocidad: 0,8 s;
+}
+.flor--1 {
+  -webkit-animation: flor-en-movimiento-1 4s lineal infinito;
+  animación:movimiento-flor-1 4s lineal infinito;
+}
+.flor--1 .flor__linea {
+  altura: 70vmin;
+  -webkit-animación-retardo: 0,3 s;
+  retraso de animación: 0,3 s;
+}
+.flor--1 .flor__linea__hoja--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 1.6s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 1.6s hacia atrás;
+}
+.flor--1 .flor__linea__hoja--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 1,4 s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 1.4s hacia atrás;
+}
+.flor--1 .flor__linea__hoja--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1,2 s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 1.2s hacia atrás;
+}
+.flor--1 .flor__linea__hoja--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 1s hacia atrás;
+}
+.flor--1 .flor__linea__hoja--5 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 1.8s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 1.8s hacia atrás;
+}
+.flor--1 .flor__linea__hoja--6 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 2s hacia atrás;
+}
+.flor--2 {
+  izquierda: 50%;
+  transformar: rotar(20deg);
+  -webkit-animation: flor-en-movimiento-2 4s lineal infinito;
+  animación:movimiento-flor-2 4s lineal infinito;
+}
+.flor--2 .flor__linea {
+  altura: 60vmin;
+  -webkit-animación-retardo: 0,6 s;
+  retraso de animación: 0,6 s;
+}
+.flor--2 .flor__linea__hoja--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 1.9s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 1.9s hacia atrás;
+}
+.flor--2 .flor__linea__hoja--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 1,7 s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 1,7 s hacia atrás;
+}
+.flor--2 .flor__linea__hoja--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1,5 s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 1.5s hacia atrás;
+}
+.flor--2 .flor__linea__hoja--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1.3s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 1.3s hacia atrás;
+}
+.flor--3 {
+  izquierda: 50%;
+  transformar: rotar(-15deg);
+  -webkit-animation: flor-en-movimiento-3 4s lineal infinito;
+  animación:movimiento-flor-3 4s lineal infinito;
+}
+.flor--3 .flor__linea {
+  -webkit-animación-retardo: 0,9 s;
+  retraso de animación: 0,9 s;
+}
+.flor--3 .flor__linea__hoja--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2,5 s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 2,5 s hacia atrás;
+}
+.flor--3 .flor__linea__hoja--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2,3 s hacia atrás;
+  animación: blooming-leaf-right var(--fl-speed) 2,3 s hacia atrás;
+}
+.flor--3 .flor__linea__hoja--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2,1 s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 2,1 s hacia atrás;
+}
+.flor--3 .flor__linea__hoja--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1.9s hacia atrás;
+  animación: blooming-leaf-left var(--fl-speed) 1.9s hacia atrás;
+}
+.flor__hojas {
+  posición: relativa;
+  -webkit-animation: flor floreciendo 2s al revés;
+  animación: flor floreciendo 2s al revés;
+}
+.flor__hojas--1 {
+  -webkit-animación-retardo: 1,1 s;
+  retraso de animación: 1,1 s;
+}
+.flor__hojas--2 {
+  -webkit-animación-retardo: 1,4 s;
+  retraso de animación: 1,4 s;
+}
+.flor__hojas--3 {
+  -webkit-animación-retardo: 1,7 s;
+  retraso de animación: 1,7 s;
+}
+.flor__hojas::después {
+  contenido: "";
+  posición: absoluta;
+  izquierda: 0;
+  arriba: 0;
+  transformar: traducir(-50%, -100%);
+  ancho: 8vmin;
+  altura: 8vmin;
+  color de fondo: #f9fd25;
+  /* color de fondo: #fd2525; */
+  filtro: desenfoque(10vmin);
+}
+.flor__hoja {
+  posición: absoluta;
+  abajo: 0;
+  izquierda: 50%;
+  ancho: 8vmin;
+  altura: 11vmin;
+  radio del borde: 51% 49% 47% 53%/44% 45% 55% 69%;
+  color de fondo: #253bfd;
+  color de fondo: #fddd25;
+  origen-transformación: centro inferior;
+  opacidad: 0,9;
+  caja-sombra: inserción 0 0 2vmin rgba(255, 255, 255, 0.5);
+}
+.flor__hoja--1 {
+  transformar: traducir(-10%, 1%) rotarY(40deg) rotarX(-50deg);
+}
+.flor__hoja--2 {
+  transformar: traducir(-50%, -4%) rotarX(40deg);
+}
+.flor__hoja--3 {
+  transformar: traducir(-90%, 0%) rotarY(45deg) rotarX(50deg);
+}
+.flor__hoja--4 {
+  ancho: 8vmin;
+  altura: 8vmin;
+  origen-transformación: abajo a la izquierda;
+  radio del borde: 4vmin 10vmin 4vmin 4vmin;
+  transformar: traducir(0%, 18%) rotarX(70deg) rotar(-43deg);
+  color de fondo: #7c6901;
+  índice z: 1;
+  opacidad: 0,8;
+}
+.flor__circulo-blanco {
+  posición: absoluta;
+  izquierda: -3.5vmin;
+  arriba:-3vmin;
+  ancho: 9vmin;
+  altura: 4vmin;
+  radio del borde: 50%;
+  color de fondo: #fff;
+}
+.flor__circulo-blanco::después {
+  contenido: "";
+  posición: absoluta;
+  izquierda: 50%;
+  arriba: 45%;
+  transformar: traducir(-50%, -50%);
+  ancho: 60%;
+  altura: 60%;
+  radio-border: heredar;
+  imagen de fondo: gradiente lineal repetitivo (
+      135 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      45 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      67,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      135 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      45 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      112,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      112,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      45 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      22,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      45 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      22,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      135 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      157,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      67,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal repetitivo(
+      67,5 grados,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparente 1px,
+      transparente 12px
+    ),
+    gradiente lineal(90 grados, rgb(255, 235, 18), rgb(255, 206, 0));
+}
+.flor__linea {
+  altura: 55vmin;
+  ancho: 1.5vmin;
+  imagen de fondo: gradiente lineal(
+      a la izquierda,
+      rgba(0, 0, 0, 0.2),
+      transparente,
+      rgba(255, 255, 255, 0,2)
+    ),
+    gradiente lineal (hasta arriba, transparente 10%, #14757a, #39c6d6);
+  caja-sombra: inserción 0 0 2px rgba(0, 0, 0, 0.5);
+  -webkit-animation: hacer crecer un árbol de flores 4s al revés;
+  animación: crecer-flor-árbol 4s hacia atrás;
+}
+.flor__linea__hoja {
+  --w: 7vmín;
+  --h: calc(var(--w) + 2vmin);
+  posición: absoluta;
+  parte superior: 20%;
+  izquierda: 90%;
+  ancho: var(--w);
+  altura: var(--h);
+  borde superior derecho radio: var(--h);
+  borde-inferior-izquierdo-radio: var(--h);
+  imagen de fondo: gradiente lineal (hasta arriba, rgba (20, 117, 122, 0.4), #5ed639);
+}
+.flor__linea__hoja--1 {
+  transformar: rotar(70deg) rotarY(30deg);
+}
+.flor__linea__hoja--2 {
+  arriba: 45%;
+  transformar: rotar(70deg) rotarY(30deg);
+}
+.flor__línea__hoja--3,
+.flor__línea__hoja--4,
+.flor__linea__hoja--6 {
+  radio del borde superior derecho: 0;
+  borde inferior izquierdo radio: 0;
+  borde superior izquierdo radio: var(--h);
+  borde-inferior-derecho-radio: var(--h);
+  izquierda: -460%;
+  arriba: 12%;
+  transformar: rotar(-70deg) rotarY(30deg);
+}
+.flor__linea__hoja--4 {
+  arriba: 40%;
+}
+.flor__linea__hoja--5 {
+  arriba: 0;
+  origen-transformación: izquierda;
+  transformar: rotar(70 grados) rotarY(30 grados) escalar(0.6);
+}
+.flor__linea__hoja--6 {
+  arriba: -2%;
+  izquierda: -450%;
+  origen-transformación: derecha;
+  transformar: rotar(-70 grados) rotarY(30 grados) escalar(0.6);
+}
+.flor__luz {
+  posición: absoluta;
+  abajo: 0vmin;
+  ancho: 1vmin;
+  altura: 1vmin;
+  color de fondo: rgb(255, 251, 0);
+  radio del borde: 50%;
+  filtro: desenfoque(0.2vmin);
+  -webkit-animation: luz-ans 4s lineal infinito hacia atrás;
+  animación: luz-ans 4s lineal infinito hacia atrás;
+}
+.flower__light:nth-child(impar) {
+  color de fondo: #23f0ff;
+}
+.flor__luz--1 {
+  izquierda: -2vmin;
+  -webkit-animación-retraso: 1s;
+  retraso de animación: 1s;
+}
+.flor__luz--2 {
+  izquierda: 3vmin;
+  -webkit-animación-retardo: 0,5 s;
+  retraso de animación: 0,5 s;
+}
+.flor__luz--3 {
+  izquierda: -6vmin;
+  -webkit-animación-retardo: 0,3 s;
+  retraso de animación: 0,3 s;
+}
+.flor__luz--4 {
+  izquierda: 6vmin;
+  -webkit-animación-retardo: 0,9 s;
+  retraso de animación: 0,9 s;
+}
+.flor__luz--5 {
+  izquierda: -1vmin;
+  -webkit-animación-retardo: 1,5 s;
+  retraso de animación: 1,5 s;
+}
+.flor__luz--6 {
+  izquierda: -4vmin;
+  -webkit-animación-retraso: 3s;
+  retraso de animación: 3s;
+}
+.flor__luz--7 {
+  izquierda: 3vmin;
+  -webkit-animación-retraso: 2s;
+  retraso de animación: 2s;
+}
+.flor__luz--8 {
+  izquierda: -6vmin;
+  -webkit-animación-retardo: 3,5 s;
+  retraso de animación: 3,5 s;
+}
+.flor__hierba {
+  --c: #159faa;
+  --linea-w: 1.5vmin;
+  posición: absoluta;
+  abajo: 12vmin;
+  izquierda: -7vmin;
+  pantalla:flexible;
+  flex-direccion: columna;
+  alinear-elementos: flex-end;
+  índice z: 20;
+  origen-transformación: centro inferior;
+  transformar: rotar(-48deg) rotarY(40deg);
+}
+.flor__hierba--1 {
+  -webkit-animation: pasto en movimiento 2s lineal infinito;
+  animación: pasto en movimiento 2s lineal infinito;
+}
+.flor__hierba--2 {
+  izquierda: 2vmin;
+  abajo: 10vmin;
+  transformar: escala(0.5) rotar(75 grados) rotarX(10 grados) rotarY(-200 grados);
+  opacidad: 0,8;
+  índice z: 0;
+  -webkit-animation: pasto en movimiento--2 1.5s lineal infinito;
+  animación: pasto en movimiento--2 1.5s lineal infinito;
+}
+.flor__hierba--arriba {
+  ancho: 7vmin;
+  altura: 10vmin;
+  radio del borde superior derecho: 100%;
+  borde derecho: var(--linea-w) sólido var(--c);
+  origen-transformación: centro inferior;
+  transformar: rotar(-2deg);
+}
+.flor__hierba--abajo {
+  margen superior: -2px;
+  ancho: var(--line-w);
+  altura: 25vmin;
+  imagen de fondo: gradiente lineal (arriba, transparente, var(--c));
+}
+.flor__hierba__hoja {
+  --tamaño: 10vmin;
+  posición: absoluta;
+  ancho: calc(var(--size) * 2.1);
+  altura: var(--tamaño);
+  borde superior izquierdo radio: var(--size);
+  borde superior derecho radio: var(--size);
+  imagen de fondo: gradiente lineal(
+    hasta arriba,
+    transparente,
+    transparente 30%,
+    var(--c)
+  );
+  índice z: 100;
+}
+.flor__hierba__hoja--1 {
+  superior: -6%;
+  izquierda: 30%;
+  --tamaño: 6vmin;
+  transformar: rotar(-20deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-1 2s 2.6s hacia atrás;
+  animación: crecimiento-hierba-respuesta-1 2s 2.6s hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--1 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-20deg) escala(0);
+  }
+}
+@keyframes pasto-creciente-ans--1 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-20deg) escala(0);
+  }
+}
+.flor__hierba__hoja--2 {
+  parte superior: -5%;
+  izquierda: -110%;
+  --tamaño: 6vmin;
+  transformar: rotar(10deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-2 2s 2.4s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--2 2s 2.4s lineal hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--2 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+@keyframes hierba en crecimiento respuesta-2 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+.flor__hierba__hoja--3 {
+  parte superior: 5%;
+  izquierda: 60%;
+  --tamaño: 8vmin;
+  transformar: rotar(-18deg) rotarX(-20deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-3 2s 2.2s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--3 2s 2.2s lineal hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--3 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-18deg) rotarX(-20deg) escalar(0);
+  }
+}
+@keyframes hierba en crecimiento-ans--3 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-18deg) rotarX(-20deg) escalar(0);
+  }
+}
+.flor__hierba__hoja--4 {
+  parte superior: 6%;
+  izquierda: -135%;
+  --tamaño: 8vmin;
+  transformar: rotar(2deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-4 2s 2s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--4 2s 2s lineal hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--4 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(2deg) escalar(0);
+  }
+}
+@keyframes hierba en crecimiento-ans--4 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(2deg) escalar(0);
+  }
+}
+.flor__hierba__hoja--5 {
+  parte superior: 20%;
+  izquierda: 60%;
+  --tamaño: 10vmin;
+  transformar: rotar(-24deg) rotarX(-20deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta--5 2s 1.8s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--5 2s 1.8s lineal hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--5 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-24deg) rotarX(-20deg) escalar(0);
+  }
+}
+@keyframes crecimiento-césped-ans--5 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-24deg) rotarX(-20deg) escalar(0);
+  }
+}
+.flor__hierba__hoja--6 {
+  arriba: 22%;
+  izquierda: -180%;
+  --tamaño: 10vmin;
+  transformar: rotar(10deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-6 2s 1.6s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--6 2s 1.6s lineal hacia atrás;
+}
+@-webkit-keyframes crecimiento-de-hierba-ans--6 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+@keyframes hierba en crecimiento ans--6 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+.flor__hierba__hoja--7 {
+  arriba: 39%;
+  izquierda: 70%;
+  --tamaño: 10vmin;
+  transformar: rotar(-10deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-7 2s 1.4s lineal hacia atrás;
+  animación: crecimiento-hierba-ans--7 2s 1.4s lineal hacia atrás;
+}
+@-webkit-keyframes pasto-creciente-ans--7 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-10deg) escala(0);
+  }
+}
+@keyframes crecimiento-de-hierba-ans--7 {
+  0% {
+    origen-transformación: abajo a la izquierda;
+    transformar: rotar(-10deg) escala(0);
+  }
+}
+.flor__hierba__hoja--8 {
+  arriba: 40%;
+  izquierda: -215%;
+  --tamaño: 11vmin;
+  transformar: rotar(10deg);
+  -webkit-animation: crecimiento-de-hierba-respuesta-8 2s 1.2s lineal hacia atrás;
+  animación: crecimiento-de-hierba-respuesta-8 2s 1.2s lineal hacia atrás;
+}
+@-webkit-keyframes pasto en crecimiento-ans--8 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+@keyframes crecimiento-de-hierba-ans--8 {
+  0% {
+    origen-transformación: abajo a la derecha;
+    transformar: rotar(10deg) escalar(0);
+  }
+}
+.flor__hierba__superposición {
+  posición: absoluta;
+  arriba: -10%;
+  derecha: 0%;
+  ancho: 100%;
+  altura: 100%;
+  color de fondo: rgba(0, 0, 0, 0.6);
+  filtro: desenfoque(1.5vmin);
+  índice z: 100;
+}
+.flor__g-largo {
+  --w: 2vmín;
+  --h: 6vmín;
+  --c: #159faa;
+  posición: absoluta;
+  abajo: 10vmin;
+  izquierda: -3vmin;
+  origen-transformación: centro inferior;
+  transformar: rotar(-30 grados) rotarY(-20 grados);
+  pantalla:flexible;
+  flex-direccion: columna;
+  alinear-elementos: flex-end;
+  -webkit-animation: flor-g-long-ans 3s lineal infinito;
+  animación: flor-g-long-ans 3s lineal infinito;
+}
+@-webkit-keyframes flor-g-long-ans {
+  0%,
+  100% {
+    transformar: rotar(-30 grados) rotarY(-20 grados);
+  }
+  50% {
+    transformar: rotar(-32deg) rot

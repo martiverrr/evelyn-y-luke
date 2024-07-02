@@ -1,93 +1,98 @@
-/* Estilos generales para el cuerpo y HTML */
-body, html {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-    background-color: #000;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    familia de fuentes: 'Poppins',cursiva;
 }
-/* Contenedor principal */
-.universe {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-/* Animación de estrellas */
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="%23fff"/></svg>');
-    background-size: 2px 2px; /* Tamaño de los puntos de las estrellas */
-    z-index: -1; /* Detrás de todos los elementos */
-    animation: stars-animation 50s linear infinite; /* Animación de movimiento de estrellas */
-}
-/* Animación de movimiento de estrellas */
-@keyframes stars-animation {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
-/* Contenedor de flores */
-.flower {
-    position: absolute;
-    width: 2000px; /* Ajustar el tamaño de las flores */
-    height: auto; /* Mantener la proporción */
-    animation: flower-animation 6s ease-in-out infinite alternate; /* Animación de oscilación de las flores */
-}
-.flower1 {
-    top: 10%; /* Posición desde arriba */
-    left: 20%; /* Posición desde la izquierda */
-}
-.flower2 {
-    top: 20%; /* Posición desde arriba */
-    left: 70%; /* Posición desde la izquierda */
-}
-}
-/* Animación de oscilación de las flores */
-@keyframes flower-animation {
-    from {
-        transform: translateY(0) rotate(0);
-    }
-    to {
-        transform: translateY(-20px) rotate(20deg);
-    }
-}
-/* Corazón animado */
-.heart {
-    position: absolute;
-    width: 1000px; /* Ajustar el tamaño del corazón */
-    height: auto; /* Mantener la proporción */
-    background-image: url('assets/heart.png'); /* Ruta de la imagen del corazón */
-    background-size: cover; /* Ajustar tamaño de la imagen */
-    animation: heart-animation 1s ease-in-out infinite alternate; /* Animación de salto del corazón */
-    bottom: 20%; /* Posición desde abajo */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%);
-}
-}
-/* Animación de salto del corazón */
-@keyframes heart-animation {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
-}
-/* Mensaje centralizado */
-.message {
-    position: absolute;
-    bottom: 10%; /* Posición desde abajo */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%);
-    color: #fff; /* Color del texto */
-    font-size: 24px; /* Tamaño de fuente */
-    font-family: Arial, sans-serif; /* Fuente del texto */
+cuerpo{
+    color: azul;
+    ancho: 100%;
+    altura: 82vh;
+    pantalla:flexible;
+    flex-direccion: columna;
+    alinear-elementos: centro;
+    justificar-contenido: centro;
+    color de fondo: negro;
+    /* relleno superior: -30; */
 }
 
+.botones{
+    relleno: 9px;
+    radio del borde: 80px;
+    color de fondo: transparente;
+    borde: ninguno;
+}
 
+.botones a{
+    color de fondo: #0a2be9;
+    relleno: 9px;
+    radio del borde: 80px;
+    -radio del borde del webkit: 80px;
+    -moz-border-radius: 80px;
+    -ms-radio-del-borde: 80px;
+    -o-radio-del-borde: 80px;
+
+}
+
+.botones a:focus{
+    color de fondo: rgb(50, 194, 194);
+}
+
+.saludos{
+    tamaño de fuente: 7rem;
+    peso de la fuente: 900;
+}
+.saludos > span{
+    animación: brillo 2,5 s entrada-salida infinita;
+}
+@keyframes brillan{
+    0%, 100%{
+        color: #fff;
+        sombra de texto: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        sombra de texto: ninguna;
+    }
+}
+.saludos > span:nth-child(2){
+    retraso de animación: .2s;
+}
+.saludos > span:nth-child(3){
+    retraso de animación: .4s;
+}
+.saludos > span:nth-child(4){
+    retraso de animación: .6s;
+}
+.saludos > span:nth-child(5){
+    retraso de animación: .8s;
+}
+.saludos > span:nth-child(6){
+    retraso de animación: 1s;
+}
+
+.descripción{
+    tamaño de fuente: 1.5rem;
+    margen inferior: 20px;
+}
+
+.botón a{
+    decoración de texto: ninguna;
+    tamaño de fuente: 1rem;
+    color: #111;
+}
+
+@media pantalla y (ancho máximo: 574px){
+    .saludos{
+        bloqueo de pantalla;
+        tamaño de fuente: 4rem;
+        peso de la fuente: 800;
+        alinear texto: centro;
+    }
+    .descripción{
+        tamaño de fuente: 2rem;
+    }
+    
+    .botón a{
+        tamaño de fuente: 1rem;
+    }
+}
